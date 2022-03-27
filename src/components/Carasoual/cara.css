@@ -1,5 +1,5 @@
 .images{
-    width: 200px;
+    width: 150px;
     height: 300px;
     padding: 2rem;
     
@@ -9,7 +9,7 @@
     height: auto;
     justify-content: center;
     overflow: hidden;
-    background-color: black;
+    background-color: rgb(187, 185, 185);
     margin-bottom: 5rem;
 }
 .images img{

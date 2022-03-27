@@ -4,7 +4,7 @@ import Mata from "./Data";
 
 export default function Post() {
   return (<>
-    <div className="posts">
+    <div className="posts" id="post">
 
       {
         Mata.map((item, index) => {

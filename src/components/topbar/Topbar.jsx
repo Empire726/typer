@@ -23,12 +23,12 @@ const Topbar = () => {
           }
         >
           <ul className="nav-link">
-            <li> <a href="/">Home</a></li>
-            <li> <a href="#">News</a></li>
-            <li> <a href="#/carasoual">Photo</a></li>
-            <li> <a href="#">Videos</a></li>
+            <li> <a href="/#">Home</a></li>
+            <li> <a href="/#post">News</a></li>
+            <li> <a href="/#cara">Photo</a></li>
+            <li> <a href="/#youtube">Videos</a></li>
             <li> <a href="#">About</a></li>
-            <li> <a href="#">Join Us</a></li>
+            <li> <a href="/#footer">Join Us</a></li>
           </ul>
         </div>
         <div className="social-media">

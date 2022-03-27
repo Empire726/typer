@@ -15,7 +15,7 @@ export default class AutoPlay extends Component {
             cssEase: "linear"
         };
         return (
-            <div className="carasoual">
+            <div className="carasoual" id='cara'>
                 
                 <Slider {...settings}>
                     <div className="images"> 
