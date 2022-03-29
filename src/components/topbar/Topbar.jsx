@@ -6,6 +6,8 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 const Topbar = () => {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
+  const handleClick = () => setShowMediaIcons(!showMediaIcons);
+
 
   return (
     <>
@@ -17,18 +19,18 @@ const Topbar = () => {
           </h2>
         </div>
 
-        <div
+        <div 
           className={
             showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"
           }
         >
-          <ul className="nav-link">
-            <li> <a href="/#">Home</a></li>
-            <li> <a href="/#post">News</a></li>
-            <li> <a href="/#cara">Photo</a></li>
-            <li> <a href="/#youtube">Videos</a></li>
-            <li> <a href="#">About</a></li>
-            <li> <a href="/#footer">Join Us</a></li>
+          <ul className="nav-link" >
+            <li > <a href="/#" onClick={handleClick}>Home</a></li>
+            <li> <a href="/#post" onClick={handleClick}>News</a></li>
+            <li> <a href="/#cara" onClick={handleClick}>Photo</a></li>
+            <li> <a href="/#youtube" onClick={handleClick}>Videos</a></li>
+            <li> <a href="/#" onClick={handleClick}>About</a></li>
+            <li> <a href="/#footer" onClick={handleClick}>Join Us</a></li>
           </ul>
         </div>
         <div className="social-media">
@@ -58,8 +60,8 @@ const Topbar = () => {
             </li>
           </ul>
 
-          <div className="hamburger-menu">
-            <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
+          <div className="hamburger-menu" onClick={handleClick} >
+            <a href="#" >
               <GiHamburgerMenu />
             </a>
           </div>

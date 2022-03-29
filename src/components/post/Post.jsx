@@ -1,13 +1,16 @@
+import { useState, createContext } from "react";
 import { Link } from "react-router-dom";
 import "./post.css";
 import Mata from "./Data";
 
 export default function Post() {
-  return (<>
+  const [user, setUser] = useState(Mata);
+  const UserContext = createContext()
+  return (<UserContext.Provider value={user}>
     <div className="posts" id="post">
 
       {
-        Mata.map((item, index) => {
+        user.map((item, index) => {
           return (<>
             <div className="post" key={index}>
               <img
@@ -18,7 +21,7 @@ export default function Post() {
               <div className="postInfo">
 
                 <span className="postTitle">
-                  <Link to="/post/abc" className="link">
+                  <Link to="/single" className="link">
                     {item.move}
                   </Link>
                 </span>
@@ -38,6 +41,6 @@ export default function Post() {
       }
     </div>
  
-  </>
+  </UserContext.Provider>
   );
 }

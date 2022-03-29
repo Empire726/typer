@@ -4,37 +4,46 @@ import "./cara.css"
 
 export default class AutoPlay extends Component {
     render() {
-        const settings = {
+        
+        let settings_3= {
             dots: true,
             infinite: true,
             slidesToShow: 3,
             slidesToScroll: 1,
             autoplay: true,
             speed: 1000,
-            autoplaySpeed: 1500,
-            cssEase: "linear"
+            autoplaySpeed: 3000,
+            cssEase: "linear",
+            responsive: [{
+                breakpoint: 780,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 1
+                }
+            }]
         };
         return (
             <div className="carasoual" id='cara'>
                 
-                <Slider {...settings}>
+                <Slider {...settings_3}>
                     <div className="images"> 
-                        <img src="../../assests/images/new1.jpg"/>
+                        <img src="../../assests/images/new1.jpg" alt=""/>
                     </div>
                     <div className="images">
-                        <img src="../../assests/images/new2.jpg" />
+                        <img src="../../assests/images/new2.jpg" alt=""/>
                     </div>
                     <div className="images">
-                        <img src="../../assests/images/new3.jpg" />
+                        <img src="../../assests/images/new3.jpg" alt=""/>
                     </div>
                     <div className="images">
-                        <img src="../../assests/images/new4.jpg" />
+                        <img src="../../assests/images/new4.jpg" alt=""/>
                     </div>
                     <div className="images">
-                        <img src="../../assests/images/new1.jpg" />
+                        <img src="../../assests/images/new1.jpg" alt=""/>
                     </div>
                     <div className="images">
-                        <img src="../../assests/images/new3.jpg" />
+                        <img src="../../assests/images/new3.jpg" alt=""/>
                     </div>
                 </Slider>
             </div>
